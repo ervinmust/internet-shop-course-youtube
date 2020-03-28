@@ -40,6 +40,10 @@
                 <td>{{ $product->description_en }}</td>
             </tr>
             <tr>
+                <td>Свойства товара:</td>
+                <td>{{ $product->properties->map->name->implode(', ') }}</td>
+            </tr>
+            <tr>
                 <td>Картинка</td>
                 <td><img src="{{ Storage::url($product->image) }}" height="240px"></td>
             </tr>
